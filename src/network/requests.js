@@ -1,0 +1,1 @@
+export const TODAYS_REPORTS="http://data.nba.net/10s/prod/v1/today.json";
