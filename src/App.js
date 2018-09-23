@@ -1,17 +1,20 @@
 import React, { Component } from 'react';
-import logo from './assets/basketball.png';
+import 'react-calendar-heatmap/dist/styles.css';
+import 'bulma/css/bulma.min.css';
 import './assets/App.css';
-import {Table} from "./components/table";
+import {BrowserRouter as Router} from "react-router-dom";
+import {Main} from "./components/main";
+import {Provider} from 'react-redux';
+import {store} from "./redux/store";
 
 export class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-        </header>
-        <Table />
-      </div>
+        <Provider store={store}>
+            <Router>
+                <Main />
+            </Router>
+        </Provider>
     );
   }
 }
