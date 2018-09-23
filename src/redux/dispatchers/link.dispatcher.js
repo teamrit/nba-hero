@@ -1,7 +1,7 @@
 import {LINK_FAIL, LINK_SUCCESS} from "../constants";
 
-export const linkLoadSuccess = item => ({
+export const linkLoadSuccess = links => ({
     type: LINK_SUCCESS,
-    item
+    links
 });
 export const linkLoadFail = error => ({ type: LINK_FAIL, error });
