@@ -1,7 +1,9 @@
-import { createStore, applyMiddleware } from 'redux';
-import { createBrowserHistory } from 'history';
+import { applyMiddleware, createStore } from 'redux';
+import {indexReducer} from "./reducers/index.reducer";
 import thunk from 'redux-thunk';
-import { indexReducer } from './foundation/index.reducer';
+import { composeWithDevTools } from 'redux-devtools-extension';
 
-export const store = createStore(indexReducer, applyMiddleware(thunk));
-export const history = createBrowserHistory({ forceRefresh: false }); // { queryKey: false }
+export const store = createStore(
+    indexReducer,
+    composeWithDevTools(applyMiddleware(thunk))
+);
