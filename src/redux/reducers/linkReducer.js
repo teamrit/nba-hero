@@ -2,7 +2,7 @@ import {LINK_FAIL, LINK_SUCCESS} from "../constants";
 
 export const linkReducer = (
     state = {
-        links: [],
+        links: {},
         error: ''
     },
     action
