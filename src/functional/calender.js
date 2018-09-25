@@ -1,19 +1,23 @@
 import * as R from 'ramda';
 
+export const createHeatChartTooltip = value => {
+    return `${value.count ? value.count : "No"} NBA matches on ${value.date ? value.date : "this date"}`
+};
+
 export const provideIntensity = value => {
     const initialValue = Math.floor(value.count/2);
     if (initialValue > 5) return 5;
     else return initialValue;
 };
 
-export const beautifyCalenderData = response => {
+export const beautifyCalenderData = (response,year) => {
     const values = R.pipe(
         R.values,
     )(response);
     const dates = R.pipe(
         R.keys,
         R.filter(date => date.match("[0-9]+")),
-        R.filter(date => date.substring(0,4) === "2018"),
+        R.filter(date => date.substring(0,4) === year),
         R.map(date => stringToDateString(date)),
         // makeDateObject(values)
     )(response);

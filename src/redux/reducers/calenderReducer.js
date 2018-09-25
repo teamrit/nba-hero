@@ -1,4 +1,5 @@
 import {CALENDER_LOAD_FAIL,CALENDER_LOAD_SUCCESS} from "../constants";
+import {beautifyCalenderData} from "../../functional/calender";
 
 export const calenderReducer = (
     state = {
