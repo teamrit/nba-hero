@@ -5,7 +5,8 @@ export const createHeatChartTooltip = value => {
 };
 
 export const provideIntensity = value => {
-    const initialValue = Math.floor(value.count/2);
+    if (value === 1) return 1;
+    const initialValue = Math.ceil(value.count/2);
     if (initialValue > 5) return 5;
     else return initialValue;
 };
@@ -22,7 +23,6 @@ export const beautifyCalenderData = (response,year) => {
         // makeDateObject(values)
     )(response);
     const answer = makeDateObject(values,dates);
-    console.log(answer);
     if (!answer) return [];
     return answer;
 };
