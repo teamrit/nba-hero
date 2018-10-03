@@ -2,27 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c0c0dd48-6b35-4979-8bd5-b861055ed2f7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/arena.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/game.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/scoreboard.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/team.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/team.logo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/teams.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/constants.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/functional/scoreboard.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/array.constants.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/dispatchers/scoreboard.dispatchers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/reducers/calender.reducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/reducers/teams.reducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/reflective.strings.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/calender.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/calender.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/table.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/actions/calender.actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/actions/calender.actions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/constants.js" beforeDir="false" />
@@ -32,7 +12,6 @@
       <change beforePath="$PROJECT_DIR$/src/redux/reducers/index.reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/index.reducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/reducers/linkReducer.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/reducers/scoreboard.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -168,7 +147,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/calender.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
+            <state relative-caret-position="-168">
               <caret line="38" column="60" selection-start-line="38" selection-start-column="60" selection-end-line="38" selection-end-column="60" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
@@ -398,7 +377,7 @@
       <workItem from="1538149468802" duration="26000" />
       <workItem from="1538276659861" duration="608000" />
       <workItem from="1538452385435" duration="5756000" />
-      <workItem from="1538598904418" duration="1919000" />
+      <workItem from="1538598904418" duration="2533000" />
     </task>
     <task id="LOCAL-00001" summary="Refactored floor to ceil to have intensity for 1 match on a day">
       <created>1538016640037</created>
@@ -418,13 +397,12 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62659000" />
+    <option name="totallyTimeSpent" value="63273000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12425645" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12425645" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -438,7 +416,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.34405595" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.34405595" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -762,7 +740,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/calender.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
+        <state relative-caret-position="-168">
           <caret line="38" column="60" selection-start-line="38" selection-start-column="60" selection-end-line="38" selection-end-column="60" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
