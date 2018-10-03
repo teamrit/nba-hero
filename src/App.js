@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import 'react-calendar-heatmap/dist/styles.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import 'uikit/dist/css/uikit.min.css';
 import 'normalize.css/normalize.css';
 import 'bulma/css/bulma.min.css';
+import 'font-awesome/css/font-awesome.min.css';
 import './assets/App.css';
 import {BrowserRouter as Router} from "react-router-dom";
 import {Main} from "./components/main";
