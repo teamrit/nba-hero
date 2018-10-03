@@ -1,4 +1,4 @@
-import {CALENDER_LOAD_FAIL,CALENDER_LOAD_SUCCESS} from "../constants";
+import {CALENDER_LOAD_FAIL,CALENDER_LOAD_SUCCESS} from "../reflective.strings";
 
 export const calenderLoadSuccess = dates => ({
     type: CALENDER_LOAD_SUCCESS,
