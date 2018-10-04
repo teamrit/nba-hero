@@ -1,8 +1,12 @@
 import { combineReducers } from 'redux';
-import {linkReducer} from "./linkReducer";
-import {calenderReducer} from "./calenderReducer";
+import {linkReducer} from "./link.reducer";
+import {calenderReducer} from "./calender.reducer";
+import {scoreBoardReducer} from "./scoreboard.reducer";
+import {teamsReducer} from './teams.reducer';
 
 export const indexReducer = combineReducers({
     links: linkReducer,
-    calender: calenderReducer
+    calender: calenderReducer,
+    scoreboard: scoreBoardReducer,
+    teams: teamsReducer
 });
