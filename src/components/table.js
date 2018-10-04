@@ -20,8 +20,6 @@ export class Table extends Component {
     };
 
     render() {
-        const {links} = this.state;
-        console.log(links);
         return (
             <p>
                 {/*{JSON.stringify(links)};*/}
