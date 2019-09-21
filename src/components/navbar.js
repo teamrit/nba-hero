@@ -1,96 +1,256 @@
-import React, {Component} from 'react';
-import {Link} from 'react-router-dom';
+import React from 'react';
+import { fade, makeStyles } from '@material-ui/core/styles';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import IconButton from '@material-ui/core/IconButton';
+import Typography from '@material-ui/core/Typography';
+import InputBase from '@material-ui/core/InputBase';
+import Badge from '@material-ui/core/Badge';
+import MenuItem from '@material-ui/core/MenuItem';
+import Menu from '@material-ui/core/Menu';
+import MenuIcon from '@material-ui/icons/Menu';
+import SearchIcon from '@material-ui/icons/Search';
+import AccountCircle from '@material-ui/icons/AccountCircle';
+import MailIcon from '@material-ui/icons/Mail';
+import NotificationsIcon from '@material-ui/icons/Notifications';
+import MoreIcon from '@material-ui/icons/MoreVert';
+import Box from "@material-ui/core/Box/Box";
+import {Link} from "react-router-dom";
+import Button from "../../node_modules/@material-ui/core/Button/Button";
 
-export class NavBar extends Component {
-    render() {
-        return (
-            <nav className="navbar is-dark is-rounded">
-                <div className="navbar-brand">
-                    <Link className="navbar-item" to="/">
-                        <img src="https://bulma.io/images/bulma-logo.png"
-                             alt="NBA Hero" width="112" height="28" />
-                    </Link>
-                    <div className="navbar-burger burger" data-target="navbarExampleTransparentExample">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                </div>
+const useStyles = makeStyles(theme => ({
+  button : {
+    margin: theme.spacing(1),
+    color: 'white',
+    textTransform: 'none'
+},
+  grow: {
+    flexGrow: 1,
+  },
+  menuButton: {
+    marginRight: theme.spacing(2),
+  },
+  title: {
+    display: 'none',
+    [theme.breakpoints.up('sm')]: {
+      display: 'block',
+    },
+  },
+  search: {
+    position: 'relative',
+    borderRadius: theme.shape.borderRadius,
+    backgroundColor: fade(theme.palette.common.white, 0.15),
+    '&:hover': {
+      backgroundColor: fade(theme.palette.common.white, 0.25),
+    },
+    marginRight: theme.spacing(2),
+    marginLeft: 0,
+    width: '100%',
+    [theme.breakpoints.up('sm')]: {
+      marginLeft: theme.spacing(3),
+      width: 'auto',
+    },
+  },
+  searchIcon: {
+    width: theme.spacing(7),
+    height: '100%',
+    position: 'absolute',
+    pointerEvents: 'none',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  inputRoot: {
+    color: 'inherit',
+  },
+  inputInput: {
+    padding: theme.spacing(1, 1, 1, 7),
+    transition: theme.transitions.create('width'),
+    width: '100%',
+    [theme.breakpoints.up('md')]: {
+      width: 200,
+    },
+  },
+  sectionDesktop: {
+    display: 'none',
+    [theme.breakpoints.up('md')]: {
+      display: 'flex',
+    },
+  },
+  sectionMobile: {
+    display: 'flex',
+    [theme.breakpoints.up('md')]: {
+      display: 'none',
+    },
+  },
+}));
 
-                <div className="navbar-menu">
-                    <div className="navbar-start">
-                        <Link className="navbar-item" to="/">
-                            Home
-                        </Link>
-                        <Link to="/table" className="navbar-item">
-                            Table
-                        </Link>
-                        <Link to="/calender" className="navbar-item">
-                            Calender
-                        </Link>
-                        <div className="navbar-item has-dropdown is-hoverable">
-                            <a className="navbar-link" href="/documentation/overview/start/">
-                                Docs
-                            </a>
+export default function PrimarySearchAppBar() {
+  const classes = useStyles();
+  const [anchorEl, setAnchorEl] = React.useState(null);
+  const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
-                            <div className="navbar-dropdown is-boxed">
-                                <a className="navbar-item" href="/documentation/overview/start/">
-                                    Overview
-                                </a>
-                                <a className="navbar-item" href="https://bulma.io/documentation/modifiers/syntax/">
-                                    Modifiers
-                                </a>
-                                <a className="navbar-item" href="https://bulma.io/documentation/columns/basics/">
-                                    Columns
-                                </a>
-                                <a className="navbar-item" href="https://bulma.io/documentation/layout/container/">
-                                    Layout
-                                </a>
-                                <a className="navbar-item" href="https://bulma.io/documentation/form/general/">
-                                    Form
-                                </a>
-                                <hr className="navbar-divider" />
-                                <a className="navbar-item" href="https://bulma.io/documentation/elements/box/">
-                                    Elements
-                                </a>
-                                <a className="navbar-item is-active"
-                                   href="https://bulma.io/documentation/components/breadcrumb/">
-                                    Components
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+  const isMenuOpen = Boolean(anchorEl);
+  const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
 
-                    <div className="navbar-end">
-                        <div className="navbar-item">
-                            <div className="field is-grouped">
-                                <p className="control">
-                                    <a className="bd-tw-button button" data-social-network="Twitter"
-                                       data-social-action="tweet" data-social-target="http://localhost:4000"
-                                       target="_blank"
-                                       href="https://twitter.com/intent/tweet?text=Bulma: a modern CSS framework based on Flexbox&amp;hashtags=bulmaio&amp;url=http://localhost:4000&amp;via=jgthms">
-              <span className="icon">
-                <i className="fab fa-twitter" />
-              </span>
-                                        <span>
-                Tweet
-              </span>
-                                    </a>
-                                </p>
-                                <p className="control">
-                                    <a className="button is-primary"
-                                       href="https://github.com/jgthms/bulma/releases/download/0.7.1/bulma-0.7.1.zip">
-              <span className="icon">
-                <i className="fas fa-download" />
-              </span>
-                                        <span>Download</span>
-                                    </a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-        );
-    }
+  function handleProfileMenuOpen(event) {
+    setAnchorEl(event.currentTarget);
+  }
+
+  function handleMobileMenuClose() {
+    setMobileMoreAnchorEl(null);
+  }
+
+  function handleMenuClose() {
+    setAnchorEl(null);
+    handleMobileMenuClose();
+  }
+
+  function handleMobileMenuOpen(event) {
+    setMobileMoreAnchorEl(event.currentTarget);
+  }
+
+  const menuId = 'primary-search-account-menu';
+  const renderMenu = (
+    <Menu
+      anchorEl={anchorEl}
+      anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
+      id={menuId}
+      keepMounted
+      transformOrigin={{ vertical: 'top', horizontal: 'right' }}
+      open={isMenuOpen}
+      onClose={handleMenuClose}
+    >
+      <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
+      <MenuItem onClick={handleMenuClose}>My account</MenuItem>
+    </Menu>
+  );
+
+  const mobileMenuId = 'primary-search-account-menu-mobile';
+  const renderMobileMenu = (
+    <Menu
+      anchorEl={mobileMoreAnchorEl}
+      anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
+      id={mobileMenuId}
+      keepMounted
+      transformOrigin={{ vertical: 'top', horizontal: 'right' }}
+      open={isMobileMenuOpen}
+      onClose={handleMobileMenuClose}
+    >
+      <MenuItem>
+        <IconButton aria-label="show 4 new mails" color="inherit">
+          <Badge badgeContent={4} color="secondary">
+            <MailIcon />
+          </Badge>
+        </IconButton>
+        <p>Messages</p>
+      </MenuItem>
+      <MenuItem>
+        <IconButton aria-label="show 11 new notifications" color="inherit">
+          <Badge badgeContent={11} color="secondary">
+            <NotificationsIcon />
+          </Badge>
+        </IconButton>
+        <p>Notifications</p>
+      </MenuItem>
+      <MenuItem onClick={handleProfileMenuOpen}>
+        <IconButton
+          aria-label="account of current user"
+          aria-controls="primary-search-account-menu"
+          aria-haspopup="true"
+          color="inherit"
+        >
+          <AccountCircle />
+        </IconButton>
+        <p>Profile</p>
+      </MenuItem>
+    </Menu>
+  );
+
+  return (
+    <div className={classes.grow}>
+      <AppBar position="static">
+        <Toolbar>
+          <IconButton
+            edge="start"
+            className={classes.menuButton}
+            color="inherit"
+            aria-label="open drawer"
+          >
+            <MenuIcon />
+          </IconButton>
+          <Link to="/" style={{ textDecoration: 'none' , color: 'white'}}>
+            <img src={require("../assets/basketball.png")} alt="" height={64}/>
+          </Link>
+          <Box mr={2}>
+            <Typography className={classes.title} variant="h6" noWrap>
+              <Link to="/" style={{ textDecoration: 'none' , color: 'white'}}>
+                NBA Hero
+              </Link>
+            </Typography>
+          </Box>
+          <Box mr={2}>
+            <Button size="large" href="/calendar" className={classes.button}>
+              Calendar
+            </Button>
+            <Button size="large" href="/teams" className={classes.button}>
+              Teams
+            </Button>
+          </Box>
+          <div className={classes.search}>
+            <div className={classes.searchIcon}>
+              <SearchIcon />
+            </div>
+            <InputBase
+              placeholder="Search…"
+              classes={{
+                root: classes.inputRoot,
+                input: classes.inputInput,
+              }}
+              inputProps={{ 'aria-label': 'search' }}
+            />
+          </div>
+          <div className={classes.grow} />
+          <div className={classes.sectionDesktop}>
+            <IconButton aria-label="show 4 new mails" color="inherit">
+              <Badge badgeContent={4} color="secondary">
+                <MailIcon />
+              </Badge>{"  "}
+              <Typography className={classes.title} variant="h6" noWrap>
+                Mail
+              </Typography>
+            </IconButton>
+            <IconButton aria-label="show 17 new notifications" color="inherit">
+              <Badge badgeContent={17} color="secondary">
+                <NotificationsIcon />
+              </Badge>
+            </IconButton>
+            <IconButton
+              edge="end"
+              aria-label="account of current user"
+              aria-controls={menuId}
+              aria-haspopup="true"
+              onClick={handleProfileMenuOpen}
+              color="inherit"
+            >
+              <AccountCircle />
+            </IconButton>
+          </div>
+          <div className={classes.sectionMobile}>
+            <IconButton
+              aria-label="show more"
+              aria-controls={mobileMenuId}
+              aria-haspopup="true"
+              onClick={handleMobileMenuOpen}
+              color="inherit"
+            >
+              <MoreIcon />
+            </IconButton>
+          </div>
+        </Toolbar>
+      </AppBar>
+      {renderMobileMenu}
+      {renderMenu}
+    </div>
+  );
 }

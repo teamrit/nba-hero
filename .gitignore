@@ -21,5 +21,4 @@ yarn-debug.log*
 yarn-error.log*
 .idea/vcs.xml
 .idea/workspace.xml
-.idea/workspace.xml
-.idea/workspace.xml
+.idea/*

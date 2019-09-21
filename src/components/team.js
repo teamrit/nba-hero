@@ -18,10 +18,10 @@ export class Team extends Component {
                 </span>
                 <div className="uk-grid uk-border-rounded is-outlined">
                     <div className="uk-width-1-2">
-                        <span className="uk-badge uk-label-success">{team.win} wins</span>
+                        <span className="uk-badge uk-label-success">{team.win}<br/>wins</span>
                     </div>
                     <div className="uk-width-1-2">
-                        <span className="uk-badge uk-label-danger">{team.loss} losses</span>
+                        <span className="uk-badge uk-label-danger">{team.loss}<br/>losses</span>
                     </div>
                 </div>
             </Fragment>

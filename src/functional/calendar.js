@@ -11,7 +11,7 @@ export const provideIntensity = value => {
     else return initialValue;
 };
 
-export const beautifyCalenderData = (response,year) => {
+export const beautifycalendarData = (response,year) => {
     const values = R.pipe(
         R.values,
     )(response);

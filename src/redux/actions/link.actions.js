@@ -5,7 +5,6 @@ import {linkLoadFail, linkLoadSuccess} from "../dispatchers/link.dispatcher";
 export const getLinks = () => dispatch =>
     Api.get(TODAYS_REPORTS)
         .then(response => {
-            console.warn(response)
             return dispatch(linkLoadSuccess(response.links));
         })
         .catch(error => {
